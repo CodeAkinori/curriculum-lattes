@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Lattes - Jhonatan Eduardo Gonçalves Geronimo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2874A6;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2874A6;
+            flex-shrink: 0;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2874A6;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2874A6;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .section-content {
+            font-size: 14px;
+            color: #333;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .education-item,
+        .experience-item,
+        .certification-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #2874A6;
+        }
+
+        .item-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2874A6;
+            margin-bottom: 5px;
+        }
+
+        .item-institution {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .item-period {
+            font-size: 13px;
+            color: #777;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .credential {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background: #E8F4F8;
+            color: #2874A6;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .award-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #F8F9FA;
+            border-left: 3px solid #2874A6;
+        }
+
+        .publication-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #F8F9FA;
+        }
+
+        .publication-link {
+            color: #2874A6;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+        }
+
+        .quote-container {
+            background: linear-gradient(135deg, #E8F4F8 0%, #F8F9FA 100%);
+            border-left: 4px solid #2874A6;
+            padding: 30px;
+            margin: 20px 0;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .quote-icon {
+            font-size: 80px;
+            color: #2874A6;
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-size: 16px;
+            font-style: italic;
+            color: #333;
+            line-height: 1.8;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+            padding-left: 40px;
+        }
+
+        .quote-author {
+            text-align: right;
+            font-size: 14px;
+            font-weight: bold;
+            color: #2874A6;
+            margin-top: 15px;
+            padding-right: 10px;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <div class="header">
+            <img src="images/profile.png" alt="Jhonatan Eduardo Gonçalves Geronimo" class="photo">
+            <div class="header-info">
+                <div class="name">Jhonatan Eduardo Gonçalves Geronimo</div>
+                <div class="contact-info">
+                    <strong>BI & Analytics Engineer</strong><br>
+                    Martin Brower - Atlanta, GA (Remoto)<br>
+                    São Paulo, Brasil<br>
+                    Inglês: Fluente | Português: Nativo
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUMO -->
+        <div class="section">
+            <div class="section-title">Resumo</div>
+            <div class="section-content">
+                Cursado em Desenvolvimento de Software no Estado de São
+                Paulo, especialização em Ciência de Dados pela EBAC e certificação Full Stack Python/Java pela mesma
+                instituição, na qual conquistou o 1º lugar geral como melhor aluno do curso em 2023.
+                Durante o serviço militar, foi graduado em <strong>5º lugar como Cabo do Exército no Tiro de Guerra
+                    02-019</strong>, em
+                Jaú-SP, recebendo posteriormente Honra ao Mérito pelo desempenho exemplar, pela conduta disciplinada
+                e pelo aproveitamento superior nas instruções e missões atribuídas.
+                Profissionalmente, atuou como Tutor e Desenvolvedor Full Stack na EBAC, instituição onde se formou e
+                com a qual manteve vínculo docente, tendo orientado e acompanhado mais de 2.000 alunos ao longo de
+                sua trajetória. Idealizou e coordenou a Jornada AI, programa que capacitou mais de 1.000
+                desenvolvedores na criação de aplicações com Inteligência Artificial. Como criador de conteúdo no
+                YouTube, produziu material educacional sobre tecnologia e IA, ampliando o alcance e o impacto formativo
+                do programa.
+                Atualmente atua como BI & Analytics Engineer, com foco em dados, automação, modelagem estatística e
+                sistemas de informação. Mantém participação ativa em comunidades de desenvolvedores e iniciativas
+                open source, incluindo contribuições nos projetos Bitcoin POS e Escolha Libertária.
+            </div>
+        </div>
+
+        <!-- FORMAÇÃO ACADÊMICA -->
+        <div class="section">
+            <div class="section-title">Formação Acadêmica/Titulação</div>
+
+            <div class="education-item">
+                <div class="item-title">Especialização em Ciência de Dados</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">2024</div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-title">Formação em FullStack Python/Java</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">2023</div>
+                <div class="item-description">Ocupando a 1ª posição como melhor aluno do curso</div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-title">Formação em Desenvolvimento de Software</div>
+                <div class="item-institution">Estado de São Paulo</div>
+                <div class="item-period">2023</div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-title">Curso de Formação de Cabos</div>
+                <div class="item-institution">Exército Brasileiro - Tiro de Guerra 02-019, Jaú-SP</div>
+                <div class="item-period">2025</div>
+                <div class="item-description">Graduado em 5º lugar. Recebeu Honra ao Mérito por excelentes serviços
+                    prestados.</div>
+            </div>
+        </div>
+
+        <!-- FORMAÇÃO COMPLEMENTAR -->
+        <div class="section">
+            <div class="section-title">Formação Complementar</div>
+
+            <div class="certification-item">
+                <div class="item-title">Data Modeling</div>
+                <div class="item-institution">Alura</div>
+                <div class="item-period">2025</div>
+            </div>
+
+            <div class="certification-item">
+                <div class="item-title">MCTS: SQL Server</div>
+                <div class="item-institution">HackerRank</div>
+                <div class="item-period">2025</div>
+                <div class="credential">Credential ID: 93EBABE8C64A</div>
+            </div>
+
+            <div class="certification-item">
+                <div class="item-title">Software Engineer</div>
+                <div class="item-institution">HackerRank</div>
+                <div class="item-period">2025</div>
+                <div class="credential">Credential ID: 5759e09d2e58</div>
+            </div>
+
+            <div class="certification-item">
+                <div class="item-title">Data Science</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">2024</div>
+            </div>
+
+            <div class="certification-item">
+                <div class="item-title">Backend Developer | Java/Spring Boot - Python/Django</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">2023</div>
+            </div>
+
+            <div class="certification-item">
+                <div class="item-title">Frontend Developer | React/Vue</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">2023</div>
+            </div>
+        </div>
+
+        <!-- ATUAÇÃO PROFISSIONAL -->
+        <div class="section">
+            <div class="section-title">Atuação Profissional</div>
+
+            <div class="experience-item">
+                <div class="item-title">BI & Analytics Engineer</div>
+                <div class="item-institution">Martin Brower - Atlanta, Georgia, Estados Unidos (Remoto)</div>
+                <div class="item-period">05/2024 - Atual | Vínculo: Empregado</div>
+                <div class="item-description">
+                    Atua na equipe de dados e analytics, desenvolvendo soluções analíticas para operações empresariais,
+                    com foco em automação, dashboards e iniciativas de governança de dados. Projetou e implementou
+                    aplicações orientadas por dados e pipelines analíticos para operações de negócios internos.
+                    Envolvido diretamente em processos de governança de dados e gerenciamento de informações em
+                    ambientes de dados distribuídos.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-title">Mid-Senior Full-Stack Developer & Tutor</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">03/2023 - Atual | Vínculo: Autônomo</div>
+                <div class="item-description">
+                    Leciona e mentora mais de 2.000 alunos em Desenvolvimento FullStack, cobrindo integração de
+                    frontend, backend e banco de dados. Projetou e liderou o programa "Jornada AI", orientando mais de
+                    1.000 desenvolvedores na criação de aplicações full-stack com inteligência artificial. Produziu mais
+                    de 10 tutoriais em vídeo, artigos técnicos e workshops práticos. Colaborou no design curricular
+                    integrando nuvem, engenharia de dados, DevOps e automação de IA, garantindo aplicabilidade no mundo
+                    real.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-title">Content Creator | Video Production, Digital Marketing, AI, YouTube</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">10/2023 - 11/2024 | Vínculo: Autônomo</div>
+                <div class="item-description">
+                    Responsável pela criação e gerenciamento de conteúdo digital para o canal oficial da EBAC no YouTube
+                    e programas educacionais online, com foco em tecnologia, IA e aprendizado prático. Produziu vídeos
+                    educacionais, roteiros e materiais de aprendizagem envolventes. Planejou e executou o programa
+                    "Jornada AI - Construa Sua Própria Inteligência Artificial", desde o design das aulas até as
+                    campanhas de marketing. Alcançou mais de 1.000 inscrições de alunos no programa Jornada AI.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-title">Software Developer</div>
+                <div class="item-institution">Faculdade de Tecnologia de São Paulo - FATEC-SP</div>
+                <div class="item-period">09/2023 - 11/2023 | Vínculo: Freelancer</div>
+                <div class="item-description">
+                    Executou projeto freelance de curto prazo focado em otimização de processos acadêmicos e
+                    administrativos por meio de automação. Desenvolveu scripts de processamento de dados para
+                    simplificar tarefas repetitivas, reduzindo o esforço manual e o tempo de execução. Implementou
+                    automações de integração de dados e relatórios, melhorando a visibilidade analítica interna.
+                </div>
+            </div>
+        </div>
+
+        <!-- ÁREAS DE ATUAÇÃO -->
+        <div class="section">
+            <div class="section-title">Áreas de Atuação</div>
+            <div class="skills-list">
+                <span class="skill-tag">Engenharia de Dados e Business Intelligence</span>
+                <span class="skill-tag">Desenvolvimento FullStack</span>
+                <span class="skill-tag">Inteligência Artificial e Automação</span>
+                <span class="skill-tag">Governança de Dados</span>
+                <span class="skill-tag">Análise Estatística</span>
+                <span class="skill-tag">Produção de Conteúdo Educacional</span>
+            </div>
+        </div>
+
+        <!-- PRÊMIOS E TÍTULOS -->
+        <div class="section">
+            <div class="section-title">Prêmios e Títulos</div>
+
+            <div class="award-item">
+                <div class="item-title">Melhor Aluno do Curso FullStack Python/Java</div>
+                <div class="item-institution">EBAC - Escola Britânica de Artes Criativas e Tecnologia</div>
+                <div class="item-period">2023</div>
+            </div>
+
+            <div class="award-item">
+                <div class="item-title">Honra ao Mérito - Tiro de Guerra 02-019</div>
+                <div class="item-institution">Exército Brasileiro, Jaú-SP</div>
+                <div class="item-description">Por excelentes serviços prestados e extraordinário aproveitamento das
+                    instruções e missões militares.</div>
+            </div>
+        </div>
+
+        <!-- PRODUÇÕES -->
+        <div class="section">
+            <div class="section-title">Produções - Artigos Publicados</div>
+
+            <div class="publication-item">
+                <strong>GERONIMO, J. E. G.</strong> Do You Still Use Requirements.txt? <em>Medium</em>, 2024.<br>
+                Disponível em: <a
+                    href="https://medium.com/@devjhonatangeronimo/do-you-still-use-requirements-txt-3f1913d2b0ee"
+                    class="publication-link"
+                    target="_blank">https://medium.com/@devjhonatangeronimo/do-you-still-use-requirements-txt-3f1913d2b0ee</a>
+            </div>
+
+            <div class="publication-item">
+                <strong>GERONIMO, J. E. G.</strong> Seniority: How to Really Measure Your Level in Software Development.
+                <em>Medium</em>, 2024.<br>
+                Disponível em: <a
+                    href="https://devjhonatangeronimo.medium.com/seniority-how-to-really-measure-your-level-in-software-development-115766251197"
+                    class="publication-link"
+                    target="_blank">https://devjhonatangeronimo.medium.com/seniority-how-to-really-measure-your-level-in-software-development-115766251197</a>
+            </div>
+        </div>
+
+        <!-- PROJETOS E INICIATIVAS -->
+        <div class="section">
+            <div class="section-title">Projetos e Iniciativas</div>
+
+            <div class="experience-item">
+                <div class="item-title">Jornada AI - Idealizador e Coordenador</div>
+                <div class="item-period">2023-2024</div>
+                <div class="item-description">
+                    Programa educacional focado em desenvolvimento de aplicações com Inteligência Artificial,
+                    capacitando mais de 1.000 desenvolvedores.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-title">Bitcoin POS - Colaborador</div>
+                <div class="item-description">
+                    Projeto open source de sistema de ponto de venda baseado em Bitcoin.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-title">Escolha Libertária - Colaborador</div>
+                <div class="item-description">
+                    Iniciativa voltada para tecnologia e princípios de liberdade individual.
+                </div>
+            </div>
+        </div>
+
+        <!-- CITAÇÃO PESSOAL -->
+        <div class="section">
+            <div class="quote-container">
+                <div class="quote-icon">"</div>
+                <div class="quote-text">
+                    Em um mundo que ostenta virtudes apenas na aparência, preservar a integridade e cultivar
+                    conhecimento profundo é o que realmente distingue um bom homem. Ao me aproximar do fim dos meus
+                    vinte anos, reconheço minha pequenez diante da vastidão do mundo. É precisamente por isso que busco
+                    superar meus próprios limites e inovar nas iniciativas e ideias que considero justas.
+                </div>
+                <div class="quote-author">— Jhonatan Eduardo Gonçalves Geronimo</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
